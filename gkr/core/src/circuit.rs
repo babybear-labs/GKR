@@ -2,7 +2,7 @@ pub mod circuit {
     const P: u64 = 101;
 
     #[derive(Clone, Copy, Debug, PartialEq)]
-    pub struct FieldElem(u64);
+    pub struct FieldElem(pub(crate) u64);
 
     impl FieldElem {
         pub fn new(value: u64) -> Self {
@@ -50,7 +50,7 @@ pub mod circuit {
             self.layers.push(Layer { gates });
         }
 
-        pub fn evaluate(&self, inputs: &[FieldElem]) -> Result<Vec<FieldElem>, CircuitError> {
+        pub fn compute_witness(&self, inputs: &[FieldElem]) -> Result<Vec<FieldElem>, CircuitError> {
             if inputs.len() != self.input_size {
                 return Err(CircuitError::InvalidInputSize(self.input_size, inputs.len()));
             }
