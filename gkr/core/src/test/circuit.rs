@@ -25,7 +25,7 @@ pub mod tests {
             FieldElem::new(3),
             FieldElem::new(4),
         ];
-        let output = circuit.evaluate(&inputs).unwrap();
+        let output = circuit.compute_witness(&inputs).unwrap();
         assert_eq!(output, vec![FieldElem::new(21)]); // (1 + 2) * (3 + 4) = 3 * 7 = 21
     }
 
@@ -33,7 +33,7 @@ pub mod tests {
     fn test_invalid_input_size() {
         let circuit = Circuit::new(4);
         let inputs = vec![FieldElem::new(1), FieldElem::new(2)];
-        let result = circuit.evaluate(&inputs);
+        let result = circuit.compute_witness(&inputs);
         assert!(matches!(
             result,
             Err(CircuitError::InvalidInputSize(4, 2))
@@ -45,7 +45,7 @@ pub mod tests {
         let mut circuit = Circuit::new(2);
         circuit.add_layer(vec![Gate::Add(0, 2)]); // Index 2 is out of bounds
         let inputs = vec![FieldElem::new(1), FieldElem::new(2)];
-        let result = circuit.evaluate(&inputs);
+        let result = circuit.compute_witness(&inputs);
         assert!(matches!(
             result,
             Err(CircuitError::InvalidGateIndex(2, 2))

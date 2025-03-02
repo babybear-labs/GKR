@@ -6,6 +6,7 @@ mod circuit;
 mod test;
 mod prover;
 mod verfier;
+mod sumcheck;
 
 fn main() {
     // circuit: (1 + 2) * (3 + 4)
