@@ -1,5 +1,5 @@
 use std::fmt;
-use std::ops::{Add, Mul};
+use std::ops::{Add, Mul, Sub};
 
 const P: u64 = 101;
 
@@ -18,12 +18,23 @@ impl FieldElem {
     pub fn mul(self, other: Self) -> Self {
         FieldElem((self.0 * other.0) % P)
     }
+
+    pub fn sub(self, other: Self) -> Self {
+        FieldElem((self.0 + P - other.0) % P)
+    }
 }
 
 impl Add for FieldElem {
     type Output = Self;
     fn add(self, other: Self) -> Self {
         self.add(other)
+    }
+}
+
+impl Sub for FieldElem {
+    type Output = Self;
+    fn sub(self, other: Self) -> Self {
+        self.sub(other)
     }
 }
 
@@ -39,3 +50,4 @@ impl fmt::Display for FieldElem {
         write!(f, "{}", self.0)
     }
 }
+

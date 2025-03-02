@@ -2,8 +2,8 @@ use crate::circuit::{Circuit, CircuitError};
 use crate::field::FieldElem;
 
 pub struct Prover<'a> {
-    circuit: &'a Circuit,
-    inputs: Vec<FieldElem>,
+    pub circuit: &'a Circuit,
+    pub(crate) inputs: Vec<FieldElem>,
     pub(crate) witness: Vec<FieldElem>, // Values at each layer
 }
 

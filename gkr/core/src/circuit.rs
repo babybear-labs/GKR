@@ -13,7 +13,7 @@ pub struct Layer {
 
 #[derive(Clone, Debug)]
 pub struct Circuit {
-    layers: Vec<Layer>,
+    pub(crate) layers: Vec<Layer>,
     input_size: usize
 }
 
