@@ -1,7 +1,8 @@
 
 #[cfg(test)]
 pub mod tests {
-    use crate::circuit::circuit::{Circuit, CircuitError, FieldElem, Gate};
+    use crate::circuit::{Circuit, CircuitError, Gate};
+    use crate::field::FieldElem;
     use super::*;
 
     #[test]

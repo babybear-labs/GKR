@@ -1,12 +1,14 @@
-use crate::circuit::circuit::{Circuit, FieldElem, Gate};
+use crate::circuit::{Circuit, Gate};
 use crate::prover::Prover;
 use crate::verfier::Verifier;
+use crate::field::FieldElem;
 
 mod circuit;
 mod test;
 mod prover;
 mod verfier;
 mod sumcheck;
+mod field;
 
 fn main() {
     // circuit: (1 + 2) * (3 + 4)

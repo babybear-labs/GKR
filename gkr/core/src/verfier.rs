@@ -1,4 +1,5 @@
-use crate::circuit::circuit::{Circuit, FieldElem};
+use crate::circuit::{Circuit};
+use crate::field::FieldElem;
 
 pub struct Verifier<'a> {
     circuit: &'a Circuit,

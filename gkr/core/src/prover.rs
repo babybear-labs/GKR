@@ -1,4 +1,5 @@
-use crate::circuit::circuit::{Circuit, CircuitError, FieldElem};
+use crate::circuit::{Circuit, CircuitError};
+use crate::field::FieldElem;
 
 pub struct Prover<'a> {
     circuit: &'a Circuit,
