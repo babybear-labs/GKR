@@ -8,8 +8,9 @@ pub enum Gate {
 
 #[derive(Clone, Debug)]
 pub struct Layer {
-    gates: Vec<Gate>,
+    pub gates: Vec<Gate>,
 }
+
 
 #[derive(Clone, Debug)]
 pub struct Circuit {
@@ -49,7 +50,7 @@ impl Circuit {
                                 values.len(),
                             ));
                         }
-                        let sum = values[*i].add(values[*j]);
+                        let sum = values[*i] + values[*j];
                         next_values.push(sum);
                     }
                     Gate::Mul(i, j) => {
@@ -59,7 +60,7 @@ impl Circuit {
                                 values.len(),
                             ));
                         }
-                        let prod = values[*i].mul(values[*j]);
+                        let prod = values[*i] * values[*j];
                         next_values.push(prod);
                     }
                 }
