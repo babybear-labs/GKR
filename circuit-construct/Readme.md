@@ -2,3 +2,4 @@ Based on [PSE fork of Halo2 v0.3.0](https://github.com/privacy-scaling-explorati
 
 Goal
 - Construct circuit for Poseidon
+- Feed that to proving backend
