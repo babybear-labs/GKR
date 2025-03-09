@@ -8,7 +8,7 @@
     - HyperPlonk
     - GKR
       - [Documentation](./gkr/Readme.md)
-
+      
 ## Resources
 - [GKR - MSM](https://github.com/morgana-proofs/GKR-MSM)
   - Multi-scalar multiplication (MSM): The addition of many points multiplied by many scalars `[𝑎]𝑃+[𝑏]𝑄+[𝑐]𝑅`. There are efficient algorithms to do this in a non-naive way.
