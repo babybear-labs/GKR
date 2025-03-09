@@ -121,7 +121,7 @@ impl<V, F: Field> AssignedCell<V, F>
 where
     for<'v> Assigned<F>: From<&'v V>,
 {
-    /// Returns the field element value of the [`AssignedCell`].
+    /// Returns the field.rs element value of the [`AssignedCell`].
     pub fn value_field(&self) -> Value<Assigned<F>> {
         self.value.to_field()
     }
