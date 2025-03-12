@@ -10,6 +10,8 @@
       - [Documentation](./gkr/Readme.md)
 
 ## Resources
+- [HOWTO: GKR compression](https://hackmd.io/@levs57/SJb7-WZFyx)
+- [Proof aggregation using GKR](https://hackmd.io/@soowon/gkr?utm_source=preview-mode&utm_medium=rec)
 - [GKR - MSM](https://github.com/morgana-proofs/GKR-MSM)
   - Multi-scalar multiplication (MSM): The addition of many points multiplied by many scalars `[𝑎]𝑃+[𝑏]𝑄+[𝑐]𝑅`. There are efficient algorithms to do this in a non-naive way.
   - Multi-exponentiation: Equivalent to an [MSM], if you use the multiplicative notation for your group (common in cryptography)
