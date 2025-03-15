@@ -1,0 +1,17 @@
+[package]
+name = "core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ark-ff = "0.4.0"
+ark-poly = "0.4.0"
+ark-std = "0.4.0"
+ark-ec = "0.4.0"
+ark-bn254 = "0.4.0"
+rand = "0.8.5"
+sha2 = "0.10.6"
+thiserror = "1.0.50"
+
+[dev-dependencies]
+criterion = "0.4"

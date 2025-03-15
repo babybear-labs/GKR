@@ -2,7 +2,7 @@ use crate::circuit::{Circuit};
 use crate::field::FieldElem;
 
 pub struct Verifier<'a> {
-    circuit: &'a Circuit,
+    pub(crate) circuit: &'a Circuit,
     pub claimed_output: FieldElem,
 }
 

@@ -1,7 +1,7 @@
 use std::fmt;
 use std::ops::{Add, Mul, Sub};
 
-const P: u64 = 101;
+pub const P: u64 = 101;
 
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub struct FieldElem(pub(crate) u64);

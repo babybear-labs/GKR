@@ -618,7 +618,7 @@ impl<F: Field> Mul<F> for Value<&Assigned<F>> {
 }
 
 impl<V> Value<V> {
-    /// Returns the field element corresponding to this value.
+    /// Returns the field.rs element corresponding to this value.
     pub fn to_field<F: Field>(&self) -> Value<Assigned<F>>
     where
         for<'v> Assigned<F>: From<&'v V>,
@@ -628,7 +628,7 @@ impl<V> Value<V> {
         }
     }
 
-    /// Returns the field element corresponding to this value.
+    /// Returns the field.rs element corresponding to this value.
     pub fn into_field<F: Field>(self) -> Value<Assigned<F>>
     where
         V: Into<Assigned<F>>,
@@ -638,7 +638,7 @@ impl<V> Value<V> {
         }
     }
 
-    /// Doubles this field element.
+    /// Doubles this field.rs element.
     ///
     /// # Examples
     ///
@@ -660,7 +660,7 @@ impl<V> Value<V> {
         }
     }
 
-    /// Squares this field element.
+    /// Squares this field.rs element.
     pub fn square<F: Field>(&self) -> Value<Assigned<F>>
     where
         V: Borrow<Assigned<F>>,
@@ -670,7 +670,7 @@ impl<V> Value<V> {
         }
     }
 
-    /// Cubes this field element.
+    /// Cubes this field.rs element.
     pub fn cube<F: Field>(&self) -> Value<Assigned<F>>
     where
         V: Borrow<Assigned<F>>,
