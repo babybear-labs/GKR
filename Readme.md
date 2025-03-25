@@ -1,4 +1,4 @@
-# GKR Recursion Proof Compression
+# [WIP] GKR Recursion Proof Compression
 
 - Steps
   - Basic implemetations
