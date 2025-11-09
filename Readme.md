@@ -36,4 +36,4 @@
     - Get an idea
 
 ## Acknowledgement
-This project is part of [Explore expander bounty](https://www.encode.club/explore-expander-bootcamp)
+This project is part of [Explore expander bounty](https://www.youtube.com/watch?v=eqwpVA3baok&list=PLfEHHr3qexv89-MW6VVMOMZIzrv3YBFIR&index=13)
