@@ -24,3 +24,4 @@ Communication Cost: `d log(B*S)`
 - [The GKR Protocol - Proof arguments ZK](https://montekki.github.io/thaler-ch4-4)
 - [Understanding GKR](https://research.chainsafe.io/blog/gkr)
 - [The GKR Protocol and Its Efficient Implementation](https://people.cs.georgetown.edu/jthaler/gkrnotes.pdf)
+- [GKR](https://github.com/amit0365/gkr)
