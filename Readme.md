@@ -1,39 +1,34 @@
-# [WIP] GKR Recursion Proof Compression
+# GKR Recursion Proof Compression (WIP)
 
-- Steps
-  - Basic implementations
-    - [GKR](./basic)
-    - [Documentation](./gkr/Readme.md)
-  - Circuit Construction
-    - [PSE fork of Halo2 v0.3.0](https://github.com/privacy-scaling-explorations/halo2/tree/v0.3.0/halo2)
-    - [Halo2 Circuit Construction Repo for integration](https://github.com/poly-layer/halo2)
-    - Proof System
-      - HyperPlonk
+A research prototype exploring Plonk + GKR integration for recursive proof compression.
+The goal: design a sensible IR that can be compiled to a Plonk/HyperPlonk backend with deferred subcircuits verified via GKR-style sumchecks.
 
-### MVP
+## Overview
 
-## Resources
-- [HOWTO: GKR compression](https://hackmd.io/@levs57/SJb7-WZFyx)
-- [Proof aggregation using GKR](https://hackmd.io/@soowon/gkr?utm_source=preview-mode&utm_medium=rec)
-- [GKR - MSM](https://github.com/morgana-proofs/GKR-MSM)
-  - Multi-scalar multiplication (MSM): The addition of many points multiplied by many scalars `[𝑎]𝑃+[𝑏]𝑄+[𝑐]𝑅`. There are efficient algorithms to do this in a non-naive way.
-  - Multi-exponentiation: Equivalent to an [MSM], if you use the multiplicative notation for your group (common in cryptography)
-  - Base field: An elliptic curve is an equation defined over some field 𝐹`. Consequently, elliptic curve points have coordinates in this field. We call this field the base field.
-  - Scalar field: 
-- Step 1
-  - Prover end-to-end
-    - with IOP
-    - with lookup
-      - logup
-    - with Frontend + VM
+This project experiments with:
+- Combining Plonk constraint systems and GKR protocols.
+- Exploring *recursive* composition through layered sumchecks.
+- Investigating Poseidon and MSM as realistic subcircuit benchmarks.
+- Building a foundation for HyperPlonk-based recursive compression.
 
-- Step 2
-  - PCS
-    - KGZ
+| Module                                     | Description                                                                  |
+| :----------------------------------------- | :--------------------------------------------------------------------------- |
+| [`gkr`](./gkr)                             | Core GKR protocol logic, including sumcheck and verifier folding.            |
+| [`basic/poseidon`](./basic/poseidon)       | Poseidon hash circuit example implemented via GKR-style gates.               |
+| [`circuit-construct`](./circuit-construct) | Circuit IR and Plonk-style compiler for layered circuit construction.        |
+| [`hyperplonk`](./hyperplonk)               | Multilinear Plonk backend (HyperPlonk PIOP) for recursive proof compression. |
 
-- Step 3
-  - Recursion
-    - Get an idea
 
+## Key Resources
+
+* [**HOW TO: GKR Compression**](https://hackmd.io/@levs57/SJb7-WZFyx) — by Lev Soukhanov, on integrating GKR with Plonk.
+* [**Proof Aggregation using GKR**](https://hackmd.io/@soowon/gkr) — overview of GKR-based aggregation.
+* [**GKR–MSM Implementation**](https://github.com/morgana-proofs/GKR-MSM) — reference design for MSM via GKR.
+  * *Multi-Scalar Multiplication (MSM)*: efficient computation of `[a]P + [b]Q + [c]R` over elliptic curves.
+  * *Multi-Exponentiation*: equivalent formulation in multiplicative groups.
+  * *Base Field*: field over which elliptic curve points are defined.
+* [**PSE Fork of Halo2 v0.3.0**](https://github.com/privacy-scaling-explorations/halo2/tree/v0.3.0/halo2) — baseline for circuit integration.
+* [**Halo2 Circuit Construction Repo**](https://github.com/poly-layer/halo2) — reusable components for circuit layering and wiring.
+  
 ## Acknowledgement
 This project is part of [Explore expander bounty](https://www.youtube.com/watch?v=eqwpVA3baok&list=PLfEHHr3qexv89-MW6VVMOMZIzrv3YBFIR&index=13)
