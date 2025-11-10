@@ -7,7 +7,7 @@ It allows a prover to convince a verifier that the sum of a multivariate polynom
 In GKR, the sum-check protocol verifies the computation of a circuit layer-by-layer. For a layer 𝐿_𝑖 with 𝑆_𝑖 gates, each gate’s output depends on inputs from the previous layer 𝐿_(𝑖 − 1) with 𝑆_(𝑖 − 1) values. We represent the layer’s computation as a multi-linear polynomial, where 𝑣 is log of the number of variables needed to index all gates.
 
 ## Horner's Method
-![](./imgs/horner.png
+![](./imgs/horner.png)
 
 ## [GKR - MSM](https://github.com/morgana-proofs/GKR-MSM)
     - Multi-scalar multiplication (MSM): The addition of many points multiplied by many scalars `[𝑎]𝑃+[𝑏]𝑄+[𝑐]𝑅`. There are efficient algorithms to do this in a non-naive way.
