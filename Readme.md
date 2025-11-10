@@ -31,4 +31,4 @@ This project experiments with:
 * [**Halo2 Circuit Construction Repo**](https://github.com/poly-layer/halo2) — reusable components for circuit layering and wiring.
   
 ## Acknowledgement
-This project is part of [Explore expander bounty](https://www.youtube.com/watch?v=eqwpVA3baok&list=PLfEHHr3qexv89-MW6VVMOMZIzrv3YBFIR&index=13)
+This project is part of [Explore expander bounty](https://www.youtube.com/watch?v=eqwpVA3baok&list=PLfEHHr3qexv89-MW6VVMOMZIzrv3YBFIR&index=13), advised by [lev soukhanov](https://x.com/levs57)
