@@ -23,6 +23,8 @@ This project experiments with:
 
 * [**HOW TO: GKR Compression**](https://hackmd.io/@levs57/SJb7-WZFyx) — by Lev Soukhanov, on integrating GKR with Plonk.
 * [**Proof Aggregation using GKR**](https://hackmd.io/@soowon/gkr) — overview of GKR-based aggregation.
+* [**GKRFold: SumFold-based GKR Proof Compression**](https://ethresear.ch/t/gkrfold-sumfold-based-gkr-proof-compression/21788)
+* [**GKRFold: SumFold-based GKR Proof Compression HackMD**](https://hackmd.io/b_9x0pmAQKaoziQ4PjlSUQ)
 * [**GKR–MSM Implementation**](https://github.com/morgana-proofs/GKR-MSM) — reference design for MSM via GKR.
   * *Multi-Scalar Multiplication (MSM)*: efficient computation of `[a]P + [b]Q + [c]R` over elliptic curves.
   * *Multi-Exponentiation*: equivalent formulation in multiplicative groups.
