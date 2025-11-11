@@ -14,7 +14,7 @@ This project experiments with:
 | Module                                     | Description                                                                  |
 | :----------------------------------------- | :--------------------------------------------------------------------------- |
 | [`gkr`](./gkr)                             | Core GKR protocol logic, including sumcheck and verifier folding.            |
-| [`basic/poseidon`](./basic/poseidon)       | Poseidon hash circuit example implemented via GKR-style gates.               |
+| [`basic/poseidon2`](./basic/poseidon)       | Poseidon hash circuit example implemented via GKR-style gates.               |
 | [`circuit-construct`](./circuit-construct) | Circuit IR and Plonk-style compiler for layered circuit construction.        |
 | [`hyperplonk`](./hyperplonk)               | Multilinear Plonk backend (HyperPlonk PIOP) for recursive proof compression. |
 
