@@ -1,6 +1,7 @@
 # GKR Recursion Proof Compression (WIP)
 
 A research prototype exploring Plonk + GKR integration for recursive proof compression (open problem).
+
 The goal: design a sensible IR that can be compiled to a Plonk/HyperPlonk backend with deferred subcircuits verified via GKR-style sumchecks.
 
 ## Overview
